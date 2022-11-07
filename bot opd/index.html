@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT</title>
+</head>
+<body>
+    <script> 
+    const validate = (question) =>{
+
+        let answer = prompt(question);
+        if (!answer) {
+          answer =  validate(question)
+        }
+
+        return answer;
+
+    }
+    const bot=()=>{
+        const question1 = "Как тебя зовут?";
+        const question2 = "Сколько тебе лет?";
+        const question3 = "Какой цвет тебе нравится?";
+        const question4 = "Тебе больше нравится кино или сериалы?";
+        const question5 = "Какой второй язык ты знаешь?";
+        const question6 = "В каком городе ты родился?";
+        const question7 = "Где тебе нравится гулять?";
+        const question8 = "Какое у тебя хобби?";
+
+        const answer1 = validate(question1);
+        const answer2 = validate(question2);
+        const answer3 = validate(question3);
+        const answer4 = validate(question4);
+        const answer5 = validate(question5);
+        const answer6 = validate(question6);
+        const answer7 = validate(question7);
+        const answer8 = validate(question8);
+
+
+        const result = `
+        Тебя зовут ${answer1} 
+        Тебе ${answer2} лет 
+        Твой любимый цвет ${answer3}
+        Тебе больше нравится ${answer4}
+        Ты знаешь ${answer5} как второй язык
+        Ты родился в ${answer6}
+        Тебе нравится гулять в ${answer7}
+        Твоё хобби это ${answer8}`;
+        alert(result);
+    }
+    bot();
+    </script>
+</body>
+</html>
